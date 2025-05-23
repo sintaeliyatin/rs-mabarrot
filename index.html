@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>RS Mabarrot</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Segoe UI", sans-serif;
+      margin: 0;
+      background-color: #fff;
+    }
+
+    nav.navbar {
+      background-color: #3BB123 !important;
+    }
+
+    .navbar-brand, .nav-link {
+      color: #fff !important;
+      font-weight: 500;
+    }
+
+    .navbar-brand img {
+      max-height: 40px;
+      margin-right: 10px;
+    }
+
+    .hero {
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url("assets/about-bg.jpg") center center no-repeat;
+      background-size: cover;
+      color: #fff;
+      text-align: center;
+      padding: 120px 0;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+    }
+
+    section {
+      padding: 60px 0;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    .service-box {
+      padding: 30px;
+      background: #f8f9fa;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .service-box:hover {
+      background-color: #e9f6f3;
+      transform: translateY(-5px);
+    }
+
+    .service-box i {
+      font-size: 2rem;
+      color: #3BB123;
+      margin-bottom: 15px;
+    }
+
+    .contact-info p {
+      font-size: 1.1rem;
+    }
+
+    footer {
+      background-color: #3BB123;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+
+    footer small {
+      font-size: 0.9rem;
+    } 
+     
+    .play-btn{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 3rem;
+      background-color: rgba(0, 173, 181, 0.8);
+      color: white;
+      border-radius: 50%;
+      width: 70px;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+
+  </style>
+  <style>
+  #kontak {
+    background-color: #2b2f32; /* Warna gelap */
+    color: #f1f1f1; /* Teks terang */
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px; /* Ukuran kecil */
+  }
+
+  #kontak h2, #kontak h5 {
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 600;
+  }
+
+  #kontak p, #kontak li {
+    font-size: 13px;
+    color: #e0e0e0;
+  }
+
+  #kontak .social-icons a {
+    color: #f1f1f1;
+    font-size: 16px;
+    margin-right: 10px;
+    transition: color 0.3s;
+  }
+
+  #kontak .social-icons a:hover {
+    color: #3BB123;
+  }
+</style>
+
+
+  
+  
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand text-white d-flex align-items-center" href="#">
+        <img src="assets/rsimnu.png" alt="Logo RS" />
+        <strong>RS Mabarrot</strong>
+      </a>
+      <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="mainNavbar">
+        <ul class="navbar-nav align-items-center mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link text-white" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#tentang">Tentang Kami</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#jadwal">Jadwal Poli</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#dokter">Dokter</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#kontak">Hubungi Kami</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+<section class="hero" id="home">
+  <div class="overlay">
+    <div class="hero-text text-center">
+      <h1 class="fw-bold">RUMAH SAKIT MABARROT</h1>
+      <p>
+        Terletak di kecamatan Bungah Kabupaten Gresik - Jawa Timur.
+        Rumah sakit Mabarrot bertipe D, dan telah terakreditasi Paripurna (KARS)
+      </p>
+      <a href="#tentang" class="btn btn-primary mt-3">Read More</a>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Tentang Kami -->
+<section id="tentang" class="py-5">
+  <div class="container">
+    <div class="section-title mb-4 text-center">Profil Rumah Sakit</div>
+    <p class="text-center mb-5">
+      RS Mabarrot adalah rumah sakit yang menyediakan layanan kesehatan umum dan spesialis, 
+      dengan komitmen memberikan pelayanan profesional dan penuh empati.
+    </p>
+
+    <div class="row align-items-start">
+      <!-- Kolom Kiri: Gambar + Video -->
+      <div class="col-md-6 mb-4 mb-md-0">
+        <div class="position-relative">
+          <img src="assets/about-bg.jpg" alt="Gedung RS Mabarrot" class="img-fluid rounded shadow">
+          <a href="https://youtu.be/it0Z2UiOHgU?si=v7fmPow0DmsvhluD" class="play-btn" target="_blank">
+            <i class="fas fa-play"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Kolom Kanan: Visi, Misi, Nilai -->
+      <div class="col-md-6">
+        <h5><strong>Visi</strong></h5>
+        <p>
+          Menjadi Rumah Sakit pilihan terbaik dalam memberikan pelayanan kesehatan yang unggul dengan ridho Allah SWT.
+        </p>
+
+        <h5 class="mt-4"><strong>Misi</strong></h5>
+        <ol>
+          <li>Memberikan pelayanan kesehatan yang prima dengan mengutamakan mutu dan kepuasan pasien.</li>
+          <li>Memberikan pelayanan dengan semangat ibadah.</li>
+          <li>
+            Menyelenggarakan pendidikan dan pelatihan SDM dalam rangka peningkatan kompetensi dan profesionalitas SDM serta menunjang pelayanan.
+          </li>
+        </ol>
+
+        <h5 class="mt-4"><strong>Nilai - Nilai</strong></h5>
+        <p><strong>1. Ramah</strong> – Senantiasa bersikap baik dan santun pada pelanggan dengan cara pelanggan yang datang disapa dan dilayani dengan senyuman hangat serta ekspresi wajah penuh persaudaraan.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Jadwal Poli -->
+<section class="bg-light py-5" id="jadwal">
+  <div class="container">
+    <div class="section-title text-center mb-4">Jadwal Poli</div>
+    <p class="text-center mb-5" id="info-hari">Informasi jadwal praktik dokter tersedia di bawah ini.</p>
+
+    <div class="table-responsive">
+      <table class="table table-bordered table-hover text-center">
+        <thead class="thead-light">
+          <tr>
+            <th>Hari</th>
+            <th>Poli Tujuan</th>
+            <th>Dokter</th>
+            <th>Jam Praktek</th>
+          </tr>
+        </thead>
+        <tbody id="jadwal-body">
+          <!-- Baris jadwal akan diisi oleh JavaScript -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<script>
+  const jadwal = [
+    { hari: 'Senin', poli: 'Spesialis Anak', dokter: 'dr. Aisyah Muna, Sp.A', jam: '08.00-10.00' },
+    { hari: 'Selasa', poli: 'Spesialis Mata', dokter: 'dr. Dimas Aryo, Sp.M', jam: '09.00-11.00' },
+    { hari: 'Rabu', poli: 'Spesialis Jantung', dokter: 'dr. Lina Putri, Sp.JP', jam: '10.00-12.00' },
+    { hari: 'Kamis', poli: 'Spesialis Bedah Umum', dokter: 'dr. Yanuar Syam, Sp.B', jam: '08.00-10.00' },
+    { hari: 'Kamis', poli: 'Spesialis Penyakit Dalam', dokter: 'dr. Hemma Wahyuda Indriyani, Sp.PD', jam: '17.00-20.00' },
+    { hari: 'Kamis', poli: 'Spesialis Paru', dokter: 'dr. Devy Trianne Putri, Sp.P', jam: '14.30-17.30' },
+    { hari: 'Kamis', poli: 'Spesialis Orthopedi', dokter: 'dr. Rizky Agung Satria, Sp.OT', jam: '15.00-17.00' },
+    { hari: 'Kamis', poli: 'Spesialis THT', dokter: 'dr. Dian Ratna Chamora, Sp.T.H.T.K.L', jam: '15.00-16.00' },
+    { hari: 'Kamis', poli: 'Spesialis Penyakit Dalam', dokter: 'dr. Aditya Purwaka, Sp.PD', jam: '09.00-12.00' },
+    { hari: 'Kamis', poli: 'Spesialis Saraf', dokter: 'dr. Nina Devi Indrawati, Sp.N', jam: '15.00-17.00' },
+    { hari: 'Kamis', poli: 'Spesialis Anak', dokter: 'dr. Gina Noor Djalilah, Sp.A', jam: '10.00-12.00' },
+    { hari: 'Jumat', poli: 'Spesialis Kulit', dokter: 'dr. Ardiansyah, Sp.KK', jam: '13.00-15.00' }
+  ];
+
+  const hariIni = new Date().toLocaleDateString('id-ID', { weekday: 'long' });
+  const jadwalHariIni = jadwal.filter(item => item.hari.toLowerCase() === hariIni.toLowerCase());
+
+  const tbody = document.getElementById('jadwal-body');
+  const infoHari = document.getElementById('info-hari');
+
+  if (jadwalHariIni.length > 0) {
+    infoHari.innerText = `Jadwal praktik untuk hari ${hariIni}:`;
+    jadwalHariIni.forEach(item => {
+      const tr = document.createElement('tr');
+      tr.innerHTML = `
+        <td>${item.hari}</td>
+        <td>${item.poli}</td>
+        <td>${item.dokter}</td>
+        <td>${item.jam}</td>
+      `;
+      tbody.appendChild(tr);
+    });
+  } else {
+    infoHari.innerText = `Tidak ada jadwal praktik untuk hari ${hariIni}.`;
+  }
+</script>
+
+
+ <!-- Dokter -->
+<section id="dokter" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4">Dokter Kami</h2>
+    <div class="row">
+
+      <!-- Dokter 1 -->
+      <div class="col-md-4 mb-4">
+        <div class="d-flex border rounded shadow-sm p-2">
+          <img src="assets/author-image.jpg" class="rounded me-3" alt="dr. Firnanda" style="width: 100px; height: 100px; object-fit: cover;">
+          <div>
+            <h5 class="mb-1">dr. Firnanda</h5>
+            <p class="mb-1">Radiologi</p>
+            <p class="mb-0">SIP: -</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dokter 2 -->
+      <div class="col-md-4 mb-4">
+        <div class="d-flex border rounded shadow-sm p-2">
+          <img src="assets/author-image.jpg" class="rounded me-3" alt="dr. Qotrunnada" style="width: 100px; height: 100px; object-fit: cover;">
+          <div>
+            <h5 class="mb-1">dr. Qotrunnada</h5>
+            <p class="mb-1">Anak</p>
+            <p class="mb-0">SIP: -</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dokter 3 -->
+      <div class="col-md-4 mb-4">
+        <div class="d-flex border rounded shadow-sm p-2">
+          <img src="assets/author-image.jpg" class="rounded me-3" alt="dr. Hilyatul Nadia" style="width: 100px; height: 100px; object-fit: cover;">
+          <div>
+            <h5 class="mb-1">dr. Hilyatul Nadia</h5>
+            <p class="mb-1">Bedah</p>
+            <p class="mb-0">SIP: -</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dokter 4 -->
+      <div class="col-md-4 mb-4">
+        <div class="d-flex border rounded shadow-sm p-2">
+          <img src="assets/author-image.jpg" class="rounded me-3" alt="dr. Riko" style="width: 100px; height: 100px; object-fit: cover;">
+          <div>
+            <h5 class="mb-1">dr. Riko</h5>
+            <p class="mb-1">Syaraf</p>
+            <p class="mb-0">SIP: -</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dokter 5 -->
+      <div class="col-md-4 mb-4">
+        <div class="d-flex border rounded shadow-sm p-2">
+          <img src="assets/author-image.jpg" class="rounded me-3" alt="dr. Chika" style="width: 100px; height: 100px; object-fit: cover;">
+          <div>
+            <h5 class="mb-1">dr. Chika</h5>
+            <p class="mb-1">Bedah</p>
+            <p class="mb-0">SIP: -</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dokter 6 -->
+      <div class="col-md-4 mb-4">
+        <div class="d-flex border rounded shadow-sm p-2">
+          <img src="assets/author-image.jpg" class="rounded me-3" alt="dr. Haikal" style="width: 100px; height: 100px; object-fit: cover;">
+          <div>
+            <h5 class="mb-1">dr. Haikal</h5>
+            <p class="mb-1">Bedah</p>
+            <p class="mb-0">SIP: -</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Kontak -->
+<section id="kontak" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Kontak Kami</h2>
+    <div class="row">
+
+      <!-- Alamat -->
+      <div class="col-md-4 mb-4">
+        <h5>Alamat</h5>
+        <p>Jl. Raya Bungah Dukun No.1D 61152 Sidorejo<br>Kabupaten Gresik, Jawa Timur 61177</p>
+        <p><strong>No Telpon:</strong> +62 3135949000</p>
+        <p><strong>E-mail:</strong> rsmabarrot@gmail.com</p>
+        <div class="social-icons mt-3">
+          <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+      <!-- Program Unggulan -->
+      <div class="col-md-4 mb-4">
+        <h5>Program Unggulan</h5>
+        <ul class="list-unstyled">
+          <li>Operasi Katarak</li>
+          <li>Home Visit Pasien Jiwa</li>
+          <li>USG 4D & USG Transvaginal</li>
+          <li>Caesaria With ERACS</li>
+          <li>Rehabilitasi Medik</li>
+          <li>MCU On-Site</li>
+          <li>HomeCare</li>
+          <li>Klinik Nyeri</li>
+          <li>Klinik Vaksin Internasional</li>
+        </ul>
+      </div>
+
+      <!-- Jam Buka & Maps -->
+      <div class="col-md-4 mb-4">
+        <h5>Jam Buka</h5>
+        <p><strong>IGD:</strong> 24 Jam</p>
+        <p><strong>Poliklinik:</strong> Senin - Sabtu</p>
+        <h5 class="mt-4">Lokasi Kami</h5>
+        <div style="width: 100%">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3953.6221592308273!2d112.55590491477314!3d-7.046897894927048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e77e32ae7de3303%3A0x1913161fe0903272!2sRSI%20Mabarrot%20MWC%20NU%20Bungah!5e0!3m2!1sid!2sid!4v1689478952012!5m2!1sid!2sid"
+            width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <small>&copy; 2025 RS Mabarrot. All rights reserved.</small>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
