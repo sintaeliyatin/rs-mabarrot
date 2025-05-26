@@ -9,7 +9,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  
+  <link href="style.css" rel="stylesheet">
   <!-- Link Tailwind CSS -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <style>
@@ -128,7 +128,7 @@
   }
 
   #kontak h2, #kontak h5 {
-    font-size: 16px;
+    font-size: 20px;
     color: #ffffff;
     font-weight: 600;
   }
@@ -147,6 +147,49 @@
 
   #kontak .social-icons a:hover {
     color: #3BB123;
+  }
+
+  .navbar-custom {
+    background: linear-gradient(to right, #2e8b57, #3BB123); 
+    padding: 1rem 0.8rem;
+    border-bottom: 3px solid #ffffff33;
+    transition: background 0.3s ease;
+  }
+
+  .navbar-custom .navbar-brand {
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: #fff;
+    gap: 0.5rem;
+  }
+
+  .navbar-custom .navbar-brand img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  .navbar-custom .nav-link {
+    color: #fff !important;
+    margin: 0 0.5rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-radius: 0.4rem;
+    padding: 0.5rem 0.75rem;
+  }
+
+  .navbar-custom .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff !important;
+  }
+
+  .navbar-toggler {
+    border: none;
+  }
+
+  .navbar-toggler-icon {
+    filter: invert(1);
   }
 </style>
 <!-- Inisialisasi Swiper -->
@@ -168,27 +211,29 @@
 </head>
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg fixed-top shadow-sm">
-    <div class="container">
-      <a class="navbar-brand text-white d-flex align-items-center" href="#">
-        <img src="assets/rsimnu.png" alt="Logo RS" />
-        <strong>RS Mabarrot NU</strong>
-      </a>
-      <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="mainNavbar">
-        <ul class="navbar-nav align-items-center mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link text-white" href="#home">Home</a></li>
-          <li class="nav-item"><a class="nav-link text-white" href="#tentang">Tentang Kami</a></li>
-          <li class="nav-item"><a class="nav-link text-white" href="#jadwal">Jadwal Poli</a></li>
-          <li class="nav-item"><a class="nav-link text-white" href="#dokter">Dokter</a></li>
-          <li class="nav-item"><a class="nav-link text-white" href="#kontak">Hubungi Kami</a></li>
-        </ul>
-      </div>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg fixed-top shadow-sm navbar-custom">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="assets/rsimnu.png" alt="Logo RS" />
+      <strong>RS Mabarrot NU</strong>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+      aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="mainNavbar">
+      <ul class="navbar-nav align-items-center mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#tentang">Tentang Kami</a></li>
+        <li class="nav-item"><a class="nav-link" href="#jadwal">Jadwal Poli</a></li>
+        <li class="nav-item"><a class="nav-link" href="#dokter">Dokter</a></li>
+        <li class="nav-item"><a class="nav-link" href="#kontak">Hubungi Kami</a></li>
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>
 
   <!-- Hero -->
 <section class="hero" id="home">
@@ -206,8 +251,9 @@
 <!-- Tambahkan JavaScript untuk teks bergantian -->
 <script>
   const texts = [
-    "Selamat Datang di RSI MABARROT.",
-    "Terletak di kecamatan Bungah Kabupaten Gresik - Jawa Timur.",
+    "Selamat Datang di RSI MABARROT MWC NU Bungah.",
+    "Terletak di JL. Raya Bungah Dukun NO.1D.",
+    "Masangan Bungah Gresik -- Jawa Timur.",
     "Kenyamanan anda prioritas kami."
   ];
   let idx = 0;
@@ -219,55 +265,101 @@
  <!-- Layanan -->
 <section id="layanan" class="py-20 bg-white">
   <div class="container mx-auto text-center fade-in">
-    <h3 class="text-3xl font-semibold text-green-700 mb-10">Layanan Unggulan</h3>
+    <h3 class="text-3xl font-semibold text-green-700 mb-10">LAYANAN UNGGULAN</h3>
     <div class="grid md:grid-cols-3 gap-8">
       <div class="p-6 border rounded shadow hover:shadow-lg">
-        <h4 class="font-bold text-green-600 mb-2">Rawat Inap</h4>
-        <p>Pelayanan rawat inap yang nyaman dan aman.</p>
+        <h4 class="font-bold text-green-600 mb-2">Layanan Kehamilan</h4>
+        <p>( ERACS )</p>
+        <p>Enhanced Recovery After Cesarean Surgery.</p>
       </div>
       <div class="p-6 border rounded shadow hover:shadow-lg">
-        <h4 class="font-bold text-green-600 mb-2">IGD 24 Jam</h4>
-        <p>Siap sedia 24/7 untuk keadaan darurat.</p>
+        <h4 class="font-bold text-green-600 mb-2">Layanan Kehamilan</h4>
+        <p>USG 4 Dimensi.</p>
       </div>
       <div class="p-6 border rounded shadow hover:shadow-lg">
-        <h4 class="font-bold text-green-600 mb-2">Poli Spesialis</h4>
-        <p>Layanan spesialis anak, kandungan, gigi, dll.</p>
+        <h4 class="font-bold text-green-600 mb-2">Layanan Kehamilan</h4>
+        <p>Senam Hamil.</p>
       </div>
       <div class="p-6 border rounded shadow hover:shadow-lg">
-        <h4 class="font-bold text-green-600 mb-2">Operasi Katarak</h4>
-        <p>Metode Pachoemulsifikasi (Minimal Sayatan)</p>
+        <h4 class="font-bold text-green-600 mb-2">Layanan Kehamilan</h4>
+        <p>Program Pro ASI</p>
       </div>
       <div class="p-6 border rounded shadow hover:shadow-lg">
-        <h4 class="font-bold text-green-600 mb-2">Home Visit Pasien Jiwa</h4>
+        <h4 class="font-bold text-green-600 mb-2">Layanan Kehamilan</h4>
         <p>Layanan kunjungan ke rumah untuk pasien jiwa.</p>
       </div>
       <div class="p-6 border rounded shadow hover:shadow-lg">
-        <h4 class="font-bold text-green-600 mb-2">USG 4D & USG Transvaginal</h4>
-        <p>Pemeriksaan ultrasonografi canggih untuk ibu hamil dan lainnya.</p>
+        <h4 class="font-bold text-green-600 mb-2">Layanan Bedah</h4>
+        <p>PHemoroid dengan Stapler.</p>
       </div>
       <div class="p-6 border rounded shadow hover:shadow-lg">
-        <h4 class="font-bold text-green-600 mb-2">Operasi Sesar dengan Eracs</h4>
-        <p>Prosedur operasi sesar modern dengan metode ERACS.</p>
+        <h4 class="font-bold text-green-600 mb-2">Layanan Gigi Spesialis</h4>
+        <p>Konservasi Gigi.</p>
+      </div>
+    </div>
+
+    <h3 class="text-3xl font-semibold text-green-700 mb-10">PELAYANAN UTAMA</h3>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="p-6 border rounded shadow hover:shadow-lg">
+        <h4 class="font-bold text-green-600 mb-2">UNIT GAWAT DARURAT (IGD 24 JAM)</h4>
       </div>
       <div class="p-6 border rounded shadow hover:shadow-lg">
-        <h4 class="font-bold text-green-600 mb-2">Rehabilitasi Medik</h4>
-        <p>Layanan rehabilitasi medis profesional.</p>
+        <h4 class="font-bold text-green-600 mb-2">POLI UMUM</h4>
       </div>
       <div class="p-6 border rounded shadow hover:shadow-lg">
-        <h4 class="font-bold text-green-600 mb-2">Medical Check UP (MCU) On-Site</h4>
-        <p>Pemeriksaan kesehatan menyeluruh di lokasi.</p>
+        <h4 class="font-bold text-green-600 mb-2">POLI SPESIALIS KANDUNGAN</h4>
       </div>
       <div class="p-6 border rounded shadow hover:shadow-lg">
-        <h4 class="font-bold text-green-600 mb-2">HomeCare</h4>
-        <p>Layanan perawatan kesehatan di rumah.</p>
+        <h4 class="font-bold text-green-600 mb-2">POLI SPESIALIS ANAK</h4>
       </div>
       <div class="p-6 border rounded shadow hover:shadow-lg">
-        <h4 class="font-bold text-green-600 mb-2">Klinik Nyeri</h4>
-        <p>Penanganan nyeri dengan USG Muskuloskeletal.</p>
+        <h4 class="font-bold text-green-600 mb-2">POLI SPESIALIS PENYAKIT DALAM</h4>
       </div>
       <div class="p-6 border rounded shadow hover:shadow-lg">
-        <h4 class="font-bold text-green-600 mb-2">Klinik Vaksin Internasional</h4>
-        <p>Pelayanan vaksin internasional lengkap.</p>
+        <h4 class="font-bold text-green-600 mb-2">POLI SPESIALIS BEDAH UMUM</h4>
+      </div>
+      <div class="p-6 border rounded shadow hover:shadow-lg">
+        <h4 class="font-bold text-green-600 mb-2">POLI SPESIALIS SARAF</h4>
+      </div>
+      <div class="p-6 border rounded shadow hover:shadow-lg">
+        <h4 class="font-bold text-green-600 mb-2">POLI SPESIALIS KONSERVASI GIGI</h4>
+      </div>
+      <div class="p-6 border rounded shadow hover:shadow-lg">
+        <h4 class="font-bold text-green-600 mb-2">PPOLI SPESIALIS THT-BKL</h4>
+      </div>
+      <div class="p-6 border rounded shadow hover:shadow-lg">
+        <h4 class="font-bold text-green-600 mb-2">POLI FISIOTERAPI</h4>
+      </div>
+      <div class="p-6 border rounded shadow hover:shadow-lg">
+        <h4 class="font-bold text-green-600 mb-2">RAWAT INAP</h4>
+      </div>
+      <div class="p-6 border rounded shadow hover:shadow-lg">
+        <h4 class="font-bold text-green-600 mb-2">KAMAR BERSALIN & KIA</h4>
+      </div>
+      <div class="p-6 border rounded shadow hover:shadow-lg">
+        <h4 class="font-bold text-green-600 mb-2">KAMAR OPERASI</h4>
+      </div>
+    </div>
+
+     <h3 class="text-3xl font-semibold text-green-700 mb-10">PELAYANAN PENUNJANG</h3>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="p-6 border rounded shadow hover:shadow-lg">
+        <h4 class="font-bold text-green-600 mb-2">FARMASI</h4>
+      </div>
+      <div class="p-6 border rounded shadow hover:shadow-lg">
+        <h4 class="font-bold text-green-600 mb-2">LABORATORIUM</h4>
+      </div>
+      <div class="p-6 border rounded shadow hover:shadow-lg">
+        <h4 class="font-bold text-green-600 mb-2">GIZI</h4>
+      </div>
+      <div class="p-6 border rounded shadow hover:shadow-lg">
+        <h4 class="font-bold text-green-600 mb-2">RADIOLOGI</h4>
+      </div>
+      <div class="p-6 border rounded shadow hover:shadow-lg">
+        <h4 class="font-bold text-green-600 mb-2">AMBULANCE</h4>
+      </div>
+      <div class="p-6 border rounded shadow hover:shadow-lg">
+        <h4 class="font-bold text-green-600 mb-2">KENDARAAN ANTAR JEMPUT</h4>
       </div>
     </div>
   </div>
@@ -297,20 +389,19 @@
       <div class="col-md-6">
         <h5><strong>Visi</strong></h5>
         <p>
-          Menjadi Rumah Sakit pilihan terbaik dalam memberikan pelayanan kesehatan yang unggul dengan ridho Allah SWT.
+          Terwujudnya Rumah Sakit yang Islami, Berkualitas, dan Profesional.
         </p>
 
         <h5 class="mt-4"><strong>Misi</strong></h5>
         <ol>
-          <li>Memberikan pelayanan kesehatan yang prima dengan mengutamakan mutu dan kepuasan pasien.</li>
-          <li>Memberikan pelayanan dengan semangat ibadah.</li>
+          <li>1. Menciptakan Nuansa Islami Dengan Pelayanan Paripurna.</li>
+          <li>2. Mewujudkan Sumber Daya Insani Yang Loyal dan Profesional.</li>
           <li>
-            Menyelenggarakan pendidikan dan pelatihan SDM dalam rangka peningkatan kompetensi dan profesionalitas SDM serta menunjang pelayanan.
-          </li>
+            3. Mewujudkan Peningkatkan Kualitas Pelayanan Rumah Sakit Islam Mabarrot MWC NU Bungah Gresik.</li>
         </ol>
 
-        <h5 class="mt-4"><strong>Nilai - Nilai</strong></h5>
-        <p><strong>1. Ramah</strong> – Senantiasa bersikap baik dan santun pada pelanggan dengan cara pelanggan yang datang disapa dan dilayani dengan senyuman hangat serta ekspresi wajah penuh persaudaraan.</p>
+        <h5 class="mt-4"><strong>MOTTO</strong></h5>
+        <p>Melayani Setulus Hati.</p>
       </div>
     </div>
   </div>
@@ -414,52 +505,43 @@
       <div class="swiper-wrapper">
         <div class="swiper-slide">
           <div class="bg-gray-100 p-6 rounded shadow max-w-xs mx-auto">
-            <img src="assets/author-image.jpg" alt="dr. Anisa Rahma" class="rounded-full mx-auto mb-4 w-48 h-48 object-cover" />
-            <h4 class="font-bold text-green-700">dr. Anisa Rahma</h4>
+            <img src="assets/dr. A'rofah Nurlina Puspitasari, Sp. JP., FIHA.png" alt="dr. A'rofah Nurlina Puspitasari, Sp. JP., FIHA" class="rounded-full mx-auto mb-4 w-48 h-48 object-cover" />
+            <h4 class="font-bold text-green-700">dr. A'rofah Nurlina Puspitasari, Sp. JP., FIHA</h4>
             <p>Spesialis Anak</p>
           </div>
         </div>
 
         <div class="swiper-slide">
           <div class="bg-gray-100 p-6 rounded shadow max-w-xs mx-auto">
-            <img src="assets/author-image.jpg" alt="dr. Hasan Malik" class="rounded-full mx-auto mb-4 w-48 h-48 object-cover" />
-            <h4 class="font-bold text-green-700">dr. Hasan Malik</h4>
+            <img src="assets/dr. Ali Sibra Mulluzi, Sp.B. M.Ked.Klin.png" alt="dr. Ali Sibra Mulluzi, Sp.B. M.Ked.Klin" class="rounded-full mx-auto mb-4 w-48 h-48 object-cover" />
+            <h4 class="font-bold text-green-700">dr. Ali Sibra Mulluzi, Sp.B. M.Ked.Klin</h4>
             <p>Spesialis Bedah</p>
           </div>
         </div>
 
         <div class="swiper-slide">
           <div class="bg-gray-100 p-6 rounded shadow max-w-xs mx-auto">
-            <img src="assets/author-image.jpg" alt="dr. Lestari Dewi" class="rounded-full mx-auto mb-4 w-48 h-48 object-cover" />
-            <h4 class="font-bold text-green-700">dr. Lestari Dewi</h4>
+            <img src="assets/dr. Aningdita Kesumo, Sp.THT-BKL.png" alt="dr. Aningdita Kesumo, Sp.THT-BKL" class="rounded-full mx-auto mb-4 w-48 h-48 object-cover" />
+            <h4 class="font-bold text-green-700">dr. Aningdita Kesumo, Sp.THT-BKL</h4>
             <p>Spesialis Kandungan</p>
           </div>
         </div>
 
          <div class="swiper-slide">
           <div class="bg-gray-100 p-6 rounded shadow max-w-xs mx-auto">
-            <img src="assets/author-image.jpg" alt="dr. Anisa Rahma" class="rounded-full mx-auto mb-4 w-48 h-48 object-cover" />
-            <h4 class="font-bold text-green-700">dr. Anisa Rahma</h4>
+            <img src="assets/dr. Dyah Retno Mumpuni, Sp.Rad.png" alt="dr. Dyah Retno Mumpuni, Sp.Rad" class="rounded-full mx-auto mb-4 w-48 h-48 object-cover" />
+            <h4 class="font-bold text-green-700">dr. Dyah Retno Mumpuni, Sp.Rad</h4>
             <p>Spesialis Anak</p>
           </div>
         </div>
 
         <div class="swiper-slide">
           <div class="bg-gray-100 p-6 rounded shadow max-w-xs mx-auto">
-            <img src="assets/author-image.jpg" alt="dr. Hasan Malik" class="rounded-full mx-auto mb-4 w-48 h-48 object-cover" />
-            <h4 class="font-bold text-green-700">dr. Hasan Malik</h4>
+            <img src="assets/dr. Garindra Wicaksono, Sp.A., M.Ked.Klin.png" alt="dr. Garindra Wicaksono, Sp.A., M.Ked.Klin" class="rounded-full mx-auto mb-4 w-48 h-48 object-cover" />
+            <h4 class="font-bold text-green-700">ddr. Garindra Wicaksono, Sp.A., M.Ked.Klin</h4>
             <p>Spesialis Bedah</p>
           </div>
         </div>
-
-        <div class="swiper-slide">
-          <div class="bg-gray-100 p-6 rounded shadow max-w-xs mx-auto">
-            <img src="assets/author-image.jpg" alt="dr. Lestari Dewi" class="rounded-full mx-auto mb-4 w-48 h-48 object-cover" />
-            <h4 class="font-bold text-green-700">dr. Lestari Dewi</h4>
-            <p>Spesialis Kandungan</p>
-          </div>
-        </div>
-      </div>
 
       <div class="swiper-pagination mt-6"></div>
     </div>
@@ -469,14 +551,15 @@
 <!-- Kontak -->
 <section id="kontak" class="py-5">
   <div class="container">
-    <h2 class="text-center mb-4">Kontak Kami</h2>
+    <h2 class="text-center mb-4">KKONTAK KAMI</h2>
     <div class="row">
 
       <!-- Alamat -->
       <div class="col-md-4 mb-4">
         <h5>Alamat</h5>
         <p>Jl. Raya Bungah Dukun No.1D 61152 Sidorejo<br>Kabupaten Gresik, Jawa Timur 61177</p>
-        <p><strong>No Telpon:</strong> +62 3135949000</p>
+        <p><strong>No Telpon:</strong> 031-3594-9000</p>
+        <p><strong>No Whatsapp:</strong> 0812-3990-9455</p>
         <p><strong>E-mail:</strong> rsmabarrot@gmail.com</p>
         <div class="social-icons mt-3">
           <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
@@ -489,15 +572,15 @@
       <div class="col-md-4 mb-4">
         <h5>Program Unggulan</h5>
         <ul class="list-unstyled">
-          <li>Operasi Katarak</li>
-          <li>Home Visit Pasien Jiwa</li>
-          <li>USG 4D & USG Transvaginal</li>
-          <li>Caesaria With ERACS</li>
-          <li>Rehabilitasi Medik</li>
-          <li>MCU On-Site</li>
-          <li>HomeCare</li>
-          <li>Klinik Nyeri</li>
-          <li>Klinik Vaksin Internasional</li>
+          <li><strong>Layanan Kehamilan</strong></li>
+          <li>★ ERACS</li>
+          <li>★ USG 4 Dimensi</li>
+          <li>★ Senam Hamil</li>
+          <li>★ Program Pro ASI</li>
+          <li><strong>Layanan Bedah</strong></li>
+          <li>★ Hemoroid dengan Stapler</li>
+          <li><strong>Layanan Gigi Spesialis</strong></li>
+          <li>★ Konservasi Gigi</li>
         </ul>
       </div>
 
